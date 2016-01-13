@@ -1,8 +1,5 @@
 # poc_bk_rannumgen
-small backend service that generates a secure random number
-
-# poc_frontend
-small frontend app that calls another, only for demo
+small backend service that generates a secure random number, for demo only
 
 #Check out
 
