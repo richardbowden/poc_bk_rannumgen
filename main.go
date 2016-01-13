@@ -11,7 +11,7 @@ import (
 )
 
 const servePortEnv string = "RANNUM_PORT"
-const defaultServePort string = "8080"
+const defaultServePort string = "9090"
 
 func genRndNumber(w rest.ResponseWriter, r *rest.Request) {
 	c := 10
