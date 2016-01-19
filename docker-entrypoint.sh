@@ -7,8 +7,12 @@ header() {
   echo "================================================================================"
 
 }
+header "Starting up..."
 
-# TODO: Here we should resolve the configuration
+header "Resolving the configuration..."
+# TODO: Here we should resolve the configuration from the config service
 export RANNUM_PORT=9090
+
+header "Running the application"
 #Start the application
 ./poc/randnum-svc
