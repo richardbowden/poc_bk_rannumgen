@@ -13,7 +13,11 @@ header "Resolving the configuration..."
 
 # Resolving the configuration from the config service
 TMP=`tempfile`
-curl --silent http://configs:8888/frontend-${ENVIRONMENT}.properties > $TMP
+curl --silent http://configs/frontend-${ENVIRONMENT}.properties > $TMP
+if [ $? -ne 0 ]; then
+  echo "Couldn't fetch the config.
+  exit 1
+fi
 echo "Environment: "
 while read LINE; do
     VAR=`echo $LINE | cut -d ':' -f 1`
