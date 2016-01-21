@@ -15,7 +15,7 @@ header "Resolving the configuration..."
 TMP=`tempfile`
 curl --silent http://configs/frontend-${ENVIRONMENT}.properties > $TMP
 if [ $? -ne 0 ]; then
-  echo "Couldn't fetch the config.
+  echo "Couldn't fetch the config."
   exit 1
 fi
 echo "Environment: "
